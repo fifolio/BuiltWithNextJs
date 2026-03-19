@@ -11,7 +11,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <meta name="description" content={metadata.description} />
             </head>
             <body>
-                {children}
+                <header style={{
+                    backgroundColor: "lightblue",
+                    padding: "1rem",
+                }}>
+                    <p>Header</p>
+                    {children}
+                </header>
+                <footer style={{
+                    backgroundColor: "lightgray",
+                    padding: "1rem",
+                }}>
+                    <p>Footer</p>
+                </footer>
             </body>
         </html>
     )
