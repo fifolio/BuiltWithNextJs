@@ -1,3 +1,5 @@
+import { ErrorWrapper } from "./error-wrapper"
+
 export const metadata = {
     title: {
         default: 'BuiltwithNext.js', // Default & fallback title for all pages
@@ -20,7 +22,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     padding: "1rem",
                 }}>
                     <p>Header</p>
-                    {children}
+                    <ErrorWrapper>
+                        {children}
+                    </ErrorWrapper>
                 </header>
                 <footer style={{
                     backgroundColor: "lightgray",

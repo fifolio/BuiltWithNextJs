@@ -11,7 +11,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ reviewI
 
     const random = getRandomInt(2);
     if(random === 1){
-        throw new Error("Error loading!")
+        throw new Error("Something went wrong while fetching the review data.")
     }
 
     const { reviewId, productId } = await params
