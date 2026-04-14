@@ -40,19 +40,22 @@ export default function UsersClient() {
     if (error) return <p>Error: {error}</p>;
 
     return (
-        <ul>
-            {users.map((user) => (
-                <li
-                    key={user.id}
-                >
-                    <div>{user.name}</div>
-                    <div>
-                        <div>username: {user.username}</div>
-                        <div>email: {user.email}</div>
-                        <div>phone: {user.phone}</div>
-                    </div>
-                </li>
-            ))}
-        </ul>
+        <>
+            <h1>Users - Client</h1>
+            <ul>
+                {users.map((user) => (
+                    <li
+                        key={user.id}
+                    >
+                        <div>{user.name}</div>
+                        <div>
+                            <div>username: {user.username}</div>
+                            <div>email: {user.email}</div>
+                            <div>phone: {user.phone}</div>
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        </>
     )
 }
